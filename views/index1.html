@@ -66,25 +66,12 @@
   </head>
   <body class="container">
     <form action="/api/posts" method="POST">
-      <h2>
-        멋쟁이사자처럼 대학 10기부터 기초 개발 스터디는 동일하게 진행되지만,
-        이후에 기획/디자인 파트와 개발 파트 중 선택하여 진행하게 됩니다. 어느
-        파트에 지원하시나요?
-      </h2>
-
-      <!-- <div style="clear: both">
-      <h3>파트</h3>
-      <select name="genre">
-        <option value="서버">서버</option>
-        <option value="웹">웹</option>
-        <option value="디자인/기획">디자인/기획</option>
-      </select>
-    </div> -->
-
       <label for=""
-        >1.다양한 IT동아리 중에서 멋쟁이사자처럼 대학 10기를 선택하고 지원
-        하시게 된 이유를 작성해 주세요. (500자 이내)</label
-      >
+        ><h1>
+          1. 다양한 IT 동아리 중에서 저희 동아리를 지원 하시게 된 이유를
+          작성해주세요. (500자 이내)
+        </h1>
+      </label>
       <textarea
         name="content_1"
         class="form-control"
@@ -95,8 +82,8 @@
       ></textarea>
       <span id="count1">(0/500)</span>
       <h1>
-        2. 위의 파트를 선택한 이유와 관련 경험을 해본 적이 있는지, 그리고 이
-        파트를 통해 어떠한 성장을 희망하시는지 작성해주세요. (500자 이내)
+        2. 우리 동아리와 관련 경험을 해본 적이 있는지, 어떤 성장을 희망하는지?
+        (500자 이내)
       </h1>
       <textarea
         name="content_2"
@@ -108,10 +95,8 @@
       ></textarea>
       <span id="count2">(0/500)</span>
       <h1>
-        5.멋쟁이사자처럼 대학은 협업과 팀워크를 중요한 가치로 생각하는
-        공동체입니다. 지원자 본인이 협업과 팀워크를 진행해보았던 경험과, 그
-        경험을 멋쟁이 사자처럼 대학에서 어떻게 적용시킬 수 있을지 작성해주세요.
-        (500자 이내)
+        3. 위의 파트를 선택한 이유와 관련 경험을 해본 적이 있는지, 그리고 이
+        파트를 통해 어떠한 성장을 희망하시는지 작성해주세요. (500자 이내)
       </h1>
       <textarea
         name="content_3"
@@ -124,11 +109,10 @@
       <span id="count5">(0/500)</span>
 
       <div style="margin: 30px">
-        <button type="submit" style="background-color: gray">Submit</button>
-        
+        <button type="submit" style="background-color: gray; width: 150px; height: 50px; border-radius: 10px;">Submit</button>
       </div>
     </form>
-    <form action="/acs" method="GET"><button type="submit" style="background-color: gray">제출 목록</button></form>
+
     <script>
       function counter() {
         var content = document.getElementById("jasoseol").value;
