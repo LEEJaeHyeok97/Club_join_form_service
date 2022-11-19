@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { Posts } from "../models";
 
-const router = Router();
+const app = Router();
 
 //글 생성
-router.post("/", async (req, res) => {
+app.post("/", async (req, res) => {
   const post_list = await Posts.create({
     title: "1",
     content1: req.body.content_1,
@@ -18,4 +18,4 @@ router.post("/", async (req, res) => {
   // res.sendFile(__dirname + '../views/formSubmitted.html');
 });
 
-export default router;
+export default app;
