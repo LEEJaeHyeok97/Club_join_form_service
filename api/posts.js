@@ -1,16 +1,18 @@
 import { Router } from "express";
 import { Posts } from "../models";
+import { verifyToken } from "./middlewares";
 
 const app = Router();
 
 //글 생성
-app.post("/", async (req, res) => {
+app.post("/", verifyToken, async (req, res) => {
+  const writer = req.decode.id;
   const post_list = await Posts.create({
-    title: "1",
+    title: "title",
     content1: req.body.content_1,
     content2: req.body.content_2,
     content3: req.body.content_3,
-    writer: "1",
+    writer: writer,
   });
 
   res.redirect("/submitComplete");
